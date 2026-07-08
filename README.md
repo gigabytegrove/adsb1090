@@ -1,5 +1,7 @@
 <img width="1913" height="905" alt="image" src="https://github.com/user-attachments/assets/c5f73f58-5dbf-44cd-8d39-aab2296ea227" />
 
+Note: This is a public release repository for ADSB1090 Local Node. Source code is not published in this repository.
+
 # ADSB1090
 
 ADSB1090 is a self-hosted ADS-B receiver, aircraft map, and local admin interface for tracking 1090 MHz aircraft traffic.
