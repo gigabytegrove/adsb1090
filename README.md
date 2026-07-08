@@ -1,155 +1,185 @@
-<img width="1913" height="905" alt="image" src="https://github.com/user-attachments/assets/c5f73f58-5dbf-44cd-8d39-aab2296ea227" />
+![ADSB1090 Local Node](https://github.com/user-attachments/assets/c5f73f58-5dbf-44cd-8d39-aab2296ea227)
 
-Note: This is a public release repository for ADSB1090 Local Node. Source code is not published in this repository.
+# ADSB1090 Local Node
 
-# ADSB1090
+ADSB1090 Local Node is a self-hosted ADS-B receiver, aircraft map, and local admin interface for 1090 MHz aircraft tracking.
 
-ADSB1090 is a self-hosted ADS-B receiver, aircraft map, and local admin interface for tracking 1090 MHz aircraft traffic.
+It is built for people who want to run their own ADS-B station with a local browser-based map, receiver status, configuration tools, and optional ADSB1090 Network participation.
 
-It is built for aviation hobbyists, ADS-B station owners, and operators who want a clean local aircraft tracking setup that can run on Windows or Linux with supported RTL-SDR hardware or compatible remote aircraft data sources.
+The local interface runs on port **8090** by default:
 
-ADSB1090 can be used as a standalone local receiver and map, or it can optionally participate in the ADSB1090 Network when enabled by the node owner.
+```text
+http://localhost:8090
+```
 
-## What ADSB1090 Does
+This repository is used for public ADSB1090 Local Node releases, release notes, documentation, and issue tracking. The source code is not published in this repository.
 
-ADSB1090 receives, processes, and displays aircraft position data from supported ADS-B sources. The local system provides an aircraft map, receiver controls, system status, coverage tools, replay features, and an owner-focused admin interface.
+---
 
-The goal is to make ADS-B receiving easier to run, easier to understand, and easier to manage without requiring every user to manually assemble several separate tools.
+## Current Release
 
-## Key Features
+**ADSB1090 1.70 Public Beta**
+
+Download the latest release:
+
+[ADSB1090 Releases](https://github.com/gigabytegrove/adsb1090/releases)
+
+Available builds:
+
+* Windows 64-bit
+* Windows 32-bit
+* Linux 64-bit
+* Linux 32-bit
+* Linux ARMv6
+* Linux ARMv7
+* Linux ARM64
+
+---
+
+## Features
 
 * Local ADS-B aircraft map
-* Local admin interface for receiver and system management
-* Support for 1090 MHz ADS-B / Mode S traffic
-* Supported RTL-SDR receiver support
-* Compatible remote aircraft data source support
-* Aircraft list and aircraft detail views
-* Coverage and reception visibility tools
-* Traffic replay features
-* Configurable map and admin appearance
-* Windows and Linux builds
-* Local-first operation
+* Browser-based admin interface
+* Receiver setup and status
+* Aircraft list and detail views
+* Coverage and reception tools
+* Traffic replay
+* Local RTL-SDR receiver support
+* Compatible remote source support
+* Map and admin appearance options
 * Optional ADSB1090 Network participation
-* Designed for both beginner and advanced ADS-B hobbyist use
 
-## Common Uses
+---
 
-ADSB1090 can be used for:
+## Hardware
 
-* A home ADS-B receiver station
-* A local aircraft tracking map
-* A headless feed node
-* A small aviation monitoring setup
-* Receiver testing and coverage checks
-* Personal aircraft observation
-* Optional participation in a wider ADS-B sharing network
+A typical local setup uses:
 
-## Supported Platforms
-
-ADSB1090 is intended to support common Windows and Linux systems, including desktop, server, and small-board Linux environments.
-
-Available builds may vary by release. Check the latest release package for the exact platforms included.
-
-## Supported Hardware
-
-ADSB1090 is designed for supported RTL-SDR based receivers commonly used for 1090 MHz ADS-B reception.
-
-A typical setup includes:
-
-* A supported RTL-SDR USB receiver
-* A 1090 MHz antenna
-* A Windows or Linux system
-* Reliable network access if optional network features are enabled
+* Supported RTL-SDR USB receiver
+* 1090 MHz antenna
+* Windows or Linux system
+* Browser access to the local interface
+* Internet access if optional Network features are enabled
 
 Remote aircraft data sources may also be used where supported.
 
-## Local-First Design
-
-ADSB1090 is designed to work as a local ADS-B receiver and map first.
-
-Network participation is optional. Node owners should be able to run ADSB1090 locally without being required to publish their receiver publicly.
-
-## Privacy
-
-ADSB1090 is intended to give node owners control over their local receiver and optional network participation.
-
-Do not publish private keys, tokens, configuration files, logs, internal endpoints, or personally identifying receiver details in public issues, commits, screenshots, or support requests.
-
-## Security Notes
-
-Do not expose the ADSB1090 admin interface directly to the public internet unless it is properly protected.
-
-Recommended precautions include:
-
-* Keep the host operating system updated
-* Use firewall rules appropriate for your environment
-* Keep private configuration files out of public repositories
-* Do not share private access tokens or internal URLs
-* Review screenshots before posting them publicly
-* Use trusted network access for administration
+---
 
 ## Installation
 
-Download the latest ADSB1090 release from the repository Releases page.
+Download the correct package for your system from the releases page, extract it, and run ADSB1090.
 
-After downloading the release package for your platform:
+### Windows
 
-1. Extract the package.
-2. Run ADSB1090.
-3. Open the local interface shown by the application.
-4. Complete receiver setup.
-5. Open the aircraft map.
-6. Adjust settings as needed from the local admin interface.
+1. Download the Windows build for your system.
+2. Extract the ZIP file.
+3. Run the ADSB1090 executable.
+4. Allow local network access if Windows Firewall prompts you.
+5. Open:
 
-Exact setup steps may vary by platform and release.
+```text
+http://localhost:8090
+```
+
+### Linux
+
+1. Download the Linux build for your system architecture.
+2. Extract the release package.
+3. Make the binary executable if needed.
+4. Run ADSB1090.
+5. Open:
+
+```text
+http://localhost:8090
+```
+
+Example:
+
+```bash
+unzip ADSB1090-*.zip
+cd ADSB1090-*
+chmod +x adsb1090
+./adsb1090
+```
+
+Package names may vary by release. Check the release notes for the version you downloaded.
+
+---
 
 ## Updating
 
-To update ADSB1090, download the latest release package and follow the release notes for that version.
+Before updating, back up your current ADSB1090 folder, configuration, and local data.
 
-Before updating, back up any important local configuration or data according to the instructions included with the release.
+General update process:
 
-## Public Issues and Support
+1. Stop ADSB1090.
+2. Back up the current folder.
+3. Download the new package for your platform.
+4. Extract the new release.
+5. Start ADSB1090.
+6. Open the local admin interface at `http://localhost:8090`.
+7. Confirm receiver, map, appearance, and Network settings.
 
-When opening a public issue, include only safe, non-sensitive information.
+---
 
-Helpful public issue details include:
+## ADSB1090 Network
+
+ADSB1090 Network participation is optional.
+
+The local node can be used without joining ADSB1090 Network. If Network features are enabled, they are controlled by the node owner through the local interface and official ADSB1090 systems.
+
+Public release builds may include Network client features intended only for authorized ADSB1090 nodes using valid credentials.
+
+Do not attempt to reverse engineer, clone, bypass, emulate, scrape, overload, or connect unauthorized software to ADSB1090 Network services.
+
+---
+
+## Privacy and Security
+
+Do not post private tokens, configuration files, logs, internal URLs, credentials, or personally identifying receiver details in public issues, screenshots, discussions, or support requests.
+
+Do not expose the ADSB1090 admin interface directly to the public internet unless it is properly protected.
+
+---
+
+## Issues
+
+Public issues are for non-sensitive bug reports, release feedback, documentation problems, and general local-node support.
+
+Helpful details include:
 
 * ADSB1090 version
 * Operating system
-* Hardware type
-* Receiver type
-* General problem description
-* Relevant non-sensitive log excerpts
-* Screenshots with private data removed
+* System architecture
+* Receiver hardware
+* Steps to reproduce the issue
+* Non-sensitive log excerpts
+* Screenshots with private information removed
 
-Do not include:
+Do not post private tokens, credentials, full configuration files, internal API details, private Network details, or unredacted logs.
 
-* Private tokens
-* Internal API URLs
-* Full configuration files
-* Private network addresses unless necessary and sanitized
-* Personally identifying station information
-* Secret keys
-* Credentials
-* Unredacted logs containing sensitive information
+---
 
-## Project Status
+## Source Code and Licensing
 
-ADSB1090 is actively developed and maintained.
+ADSB1090 Local Node is distributed publicly as release builds. The source code is not published in this repository.
 
-Public releases are intended to provide a stable local ADS-B receiver and aircraft map experience while continuing to improve usability, reliability, platform support, and owner-facing controls.
+Unless a separate written license is provided by Gigabyte Grove, no permission is granted to copy, modify, redistribute, reverse engineer, repackage, resell, or create derivative works from ADSB1090, its release packages, Network integration behavior, or related project materials.
+
+All rights are reserved by Gigabyte Grove.
+
+---
 
 ## Disclaimer
 
-ADSB1090 is intended for hobbyist, educational, and informational aviation tracking use.
+ADSB1090 is intended for hobbyist, educational, and informational aircraft tracking use.
 
-Aircraft position data may be incomplete, delayed, inaccurate, or unavailable depending on receiver coverage, signal quality, aircraft equipment, local conditions, and data source limitations.
+It is not a certified aviation system, flight safety system, navigation system, ATC system, dispatch system, or emergency response tool.
 
-Do not use ADSB1090 as a primary source for flight safety, navigation, emergency response, or operational decision-making.
+Aircraft data may be incomplete, delayed, inaccurate, or unavailable.
 
-## License
+---
 
-No license is granted unless a license file is included in this repository.
+## About
 
-If this repository does not include a license file, all rights are reserved by the project owner.
+ADSB1090 is developed by Gigabyte Grove.
