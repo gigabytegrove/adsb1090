@@ -21,7 +21,7 @@ jobs:
           import re
           import sys
 
-          pattern = re.compile(r"!?[[^]]*](([^)]+))")
+          pattern = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
           failures = []
 
           for md in Path(".").rglob("*.md"):
@@ -30,6 +30,7 @@ jobs:
               text = md.read_text(encoding="utf-8", errors="replace")
               for raw in pattern.findall(text):
                   target = raw.strip().strip("<>")
+                  target = re.split(r"\s+[\"']", target, maxsplit=1)[0]
                   if not target or target.startswith(("#", "http://", "https://", "mailto:", "tel:", "data:")):
                       continue
                   target = unquote(target.split("#", 1)[0].split("?", 1)[0]).strip()
