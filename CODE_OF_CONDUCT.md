@@ -1,0 +1,7 @@
+# Code of Conduct
+
+Be respectful, constructive, and focused on the project.
+
+Harassment, threats, discrimination, targeted abuse, doxxing, spam, and deliberately disruptive behavior are not acceptable. Technical disagreement is welcome when it remains specific, evidence-based, and civil.
+
+Maintainers may edit, hide, lock, or remove content and may restrict participation when necessary to keep project spaces productive and safe.
