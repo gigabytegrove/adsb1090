@@ -185,3 +185,7 @@ Aircraft data may be incomplete, delayed, inaccurate, or unavailable.
 ## About
 
 ADSB1090 is developed by Gigabyte Grove.
+
+## Support Gigabyte Grove
+
+If this project is useful to you, you can support ongoing Gigabyte Grove development with an optional [PayPal donation](https://paypal.me/gigabytegrove). Donations are appreciated but never required to use this repository.
