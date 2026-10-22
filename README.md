@@ -4,6 +4,19 @@
 
 # ADSB1090 Local Node
 
+<!-- GIGABYTE GROVE REPOSITORY BADGES START -->
+<p align="center">
+  <a href="https://github.com/gigabytegrove/adsb1090"><img alt="GitHub repository" src="https://img.shields.io/badge/GitHub-Repository-181717?logo=github&logoColor=white"></a>
+  <a href="https://github.com/gigabytegrove/adsb1090/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/gigabytegrove/adsb1090?style=flat&label=Stars&logo=github"></a>
+  <a href="https://github.com/gigabytegrove/adsb1090/issues"><img alt="Issues" src="https://img.shields.io/badge/Issues-View-555555?logo=github"></a>
+  <a href="https://github.com/gigabytegrove/adsb1090/releases"><img alt="Releases" src="https://img.shields.io/badge/Releases-View-555555?logo=github"></a>
+  <a href="https://paypal.me/gigabytegrove"><img alt="Donate via PayPal" src="https://img.shields.io/badge/Donate-PayPal-0070BA?logo=paypal&logoColor=white"></a>
+</p>
+<p align="center">
+  <a href="https://github.com/gigabytegrove/adsb1090">Repository</a> · <a href="https://github.com/gigabytegrove/adsb1090/stargazers">Stars</a> · <a href="https://github.com/gigabytegrove/adsb1090/issues">Issues</a> · <a href="https://github.com/gigabytegrove/adsb1090/releases">Releases</a> · <a href="https://paypal.me/gigabytegrove">Donate via PayPal</a>
+</p>
+<!-- GIGABYTE GROVE REPOSITORY BADGES END -->
+
 ADSB1090 Local Node is a self-hosted ADS-B receiver, aircraft map, and local admin interface for 1090 MHz aircraft tracking.
 
 It is built for people who want to run their own ADS-B station with a local browser-based map, receiver status, configuration tools, and optional ADSB1090 Network participation.
