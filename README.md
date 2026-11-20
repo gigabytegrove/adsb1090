@@ -33,7 +33,11 @@ This repository is used for public ADSB1090 Local Node releases, release notes, 
 
 ## Current Release
 
-**ADSB1090 1.70 Public Beta**
+**Production channel: ADSB1090 v1.71.1** (reported map-rendering regression under investigation).
+
+Development `v1.80.x` releases are prereleases and are **not** the default production download.
+
+The installed version displayed by the node and its `-version-json` build metadata are authoritative. The GitHub release tag and downloaded ZIP should match that installed version.
 
 Download the latest release:
 
