@@ -33,9 +33,9 @@ This repository is used for public ADSB1090 Local Node releases, release notes, 
 
 ## Current Release
 
-**Production channel: ADSB1090 v1.71.1** (reported map-rendering regression under investigation).
+**Production channel:** [Latest stable ADSB1090 release](https://github.com/gigabytegrove/adsb1090/releases/latest).
 
-Development `v1.80.x` releases are prereleases and are **not** the default production download.
+Development prereleases do not replace the stable production download.
 
 The installed version displayed by the node and its `-version-json` build metadata are authoritative. The GitHub release tag and downloaded ZIP should match that installed version.
 
